@@ -1,0 +1,279 @@
+@use "./variables" as *;
+
+// BASE STYLING
+html {
+  height: 100vh;
+}
+
+body {
+  background-attachment: fixed;
+  margin: 15px;
+  transition: all 0.3s ease;
+  height: 95vh;
+}
+
+.wrapper {
+  max-width: 600px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+main {
+  position: relative;
+}
+
+.img-container {
+  height: 60vh;
+  position: relative;
+
+  img {
+    object-position: 42%;
+    border-radius: 50% 50% 0% 0%;
+    transition: all 0.3s ease;
+  }
+}
+
+.sparkle {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  display: inline-block;
+  content: "";
+}
+
+.right {
+  right: -20px;
+  top: 10px;
+}
+
+.left {
+  left: -20px;
+  top: 10px;
+}
+
+.text-container {
+  position: absolute;
+  top: -60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 15px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.75rem;
+  text-align: center;
+  margin-bottom: 0;
+  padding-top: 20px;
+}
+
+header h1 {
+  font-size: 1.9rem;
+}
+
+h2 {
+  font-size: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 0.8rem;
+  text-align: center;
+  margin: 10px 0 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+    margin: 15px 0;
+    width: 115px;
+  }
+
+  a {
+    font-size: 1.5rem;
+
+    i {
+      transition: all 0.2s ease;
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+
+  .label {
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+    top: 18px;
+    right: 15px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.7);
+    }
+
+    .ball {
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      height: 22px;
+      width: 22px;
+      transform: translateX(0px);
+      transition: transform 0.2s linear;
+    }
+  }
+
+  .checkbox:checked + .label .ball {
+    transform: translateX(24px);
+  }
+
+  .fa-moon {
+    color: $secondaryDark;
+    font-size: 0.8rem;
+  }
+
+  .fa-sun {
+    color: $tertiaryLight;
+    font-size: 0.8rem;
+  }
+}
+
+// LIGHT MODE
+.light-mode {
+  background-attachment: fixed;
+  background: rgb(163, 228, 232);
+  background: linear-gradient(
+    144deg,
+    $quinaryLight 0%,
+    $quaternaryLight 30%,
+    $tertiaryLight 100%
+  );
+  border: 15px double $quaternaryLight;
+
+  img {
+    border: 15px double $quaternaryLight;
+  }
+
+  .sparkle {
+    background: url("../assets/sparkle-light.png") no-repeat 0 0;
+    background-size: 100%;
+  }
+
+  h1,
+  h2 {
+    color: $secondaryLight;
+    text-shadow: -1px -1px 0 $tertiaryLight, 1px -1px 0 $tertiaryLight,
+      -1px 1px 0 $tertiaryLight, 1px 1px 0 $tertiaryLight;
+  }
+
+  .label {
+    background-color: $quaternaryLight;
+
+    .ball {
+      background-color: $primaryLight;
+    }
+  }
+
+  a i {
+    color: $primaryLight;
+
+    &:hover {
+      color: $quinaryLight;
+    }
+  }
+
+  p {
+    color: $quinaryLight;
+  }
+}
+
+// DARK MODE
+.dark-mode {
+  background-attachment: fixed;
+  background: rgb(163, 228, 232);
+  background: linear-gradient(
+    144deg,
+    $secondaryDark 0%,
+    $quaternaryDark 30%,
+    $primaryDark 90%
+  );
+  border: 15px double $quaternaryDark;
+
+  img {
+    border: 15px double $quaternaryDark;
+  }
+
+  .sparkle {
+    background: url("../assets/sparkle-dark.png") no-repeat 0 0;
+    background-size: 100%;
+  }
+
+  h1,
+  h2 {
+    color: $quinaryDark;
+    text-shadow: -1px -1px 0 $quaternaryDark, 1px -1px 0 $quaternaryDark,
+      -1px 1px 0 $quaternaryDark, 1px 1px 0 $quaternaryDark;
+  }
+
+  .label {
+    background-color: $quaternaryDark;
+
+    .ball {
+      background-color: $primaryDark;
+    }
+  }
+
+  a i {
+    color: $secondaryDark;
+
+    &:hover {
+      color: $quinaryDark;
+    }
+  }
+
+  p {
+    color: $quinaryDark;
+  }
+
+  img {
+    object-position: center;
+  }
+}
+
+@media (max-height: 750px) {
+  .img-container {
+    margin-top: 10vh;
+  }
+
+  header {
+    display: none;
+  }
+
+  footer {
+    display: none;
+  }
+}
