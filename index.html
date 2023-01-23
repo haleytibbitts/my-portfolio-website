@@ -8,6 +8,10 @@
       src="https://kit.fontawesome.com/c799a4ccd9.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,61 +19,159 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <title>haley tibbitts | coming soon</title>
+    <title>haley tibbitts | web developer</title>
   </head>
 
   <body id="theme" class="light-mode">
-    <div class="wrapper">
-      <header>
-        <h1>haley tibbitts</h1>
-        <h2>front-end web developer</h2>
-      </header>
-      <main>
-        <div class="img-container">
-          <div class="sparkle left"></div>
-          <img
-            src="./assets/day-sky.jpg"
-            alt="Fluffy white clouds in a pale blue sky."
-            id="sky"
-          />
-          <div class="sparkle right"></div>
-        </div>
-        <div class="text-container">
-          <h1>coming <span>soon</span></h1>
-          <h2>stay tuned, folks.</h2>
-        </div>
+    <header id="home">
+      <div class="wrapper">
         <nav>
           <ul>
-            <li>
-              <a href="https://github.com/haleytibbitts"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/haleytibbitts"
-                ><i class="fa-brands fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://medium.com/@haleytibbitts"
-                ><i class="fa-brands fa-medium"></i
-              ></a>
-            </li>
+            <li><p class="logo">ht.</p></li>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
           </ul>
-          <div class="toggle">
-            <input type="checkbox" class="checkbox" id="chk" />
-            <label class="label" for="chk">
-              <i class="fas fa-moon"></i>
-              <i class="fas fa-sun"></i>
-              <div class="ball"></div>
-            </label>
-          </div>
         </nav>
-      </main>
-      <footer>
-        <p>Created by Haley Tibbitts ©2023</p>
-      </footer>
-    </div>
+        <h1>haley tibbitts</h1>
+        <h2>front-end web developer</h2>
+        <div class="img-container">
+          <img
+            src="./assets/day-sky.jpg"
+            alt="A bright blue sky with fluffy white clouds"
+          />
+        </div>
+        <div class="toggle">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="about" id="about">
+        <div class="wrapper">
+          <div class="img-container">
+            <img src="./assets/haley.jpeg" alt="A photo of the developer." />
+          </div>
+          <h3>about me</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae aut
+            laudantium asperiores pariatur qui velit iusto aperiam rem quam
+            maiores. Deleniti et accusantium nam earum obcaecati laborum
+            quibusdam dolorem exercitationem odio quod rerum nemo, porro eum
+            similique vero ex. Explicabo fuga ullam itaque. Quibusdam,
+            exercitationem facilis maxime accusantium ipsa reiciendis.
+          </p>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <div class="wrapper">
+          <h3>skills</h3>
+          <div class="skill-container">
+            <i class="devicon-html5-plain"></i>
+            <h5>html</h5>
+          </div>
+          <div class="skill-container">
+            <i class="devicon-css3-plain"></i>
+            <h5>css</h5>
+          </div>
+          <div class="skill-container">
+            <i class="devicon-sass-original"></i>
+            <h5>sass</h5>
+          </div>
+          <div class="skill-container">
+            <i class="devicon-javascript-plain"></i>
+            <h5>javascript</h5>
+          </div>
+          <div class="skill-container">
+            <i class="devicon-react-original"></i>
+            <h4>react</h5>
+          </div>
+          <div class="skill-container">
+            <i class="devicon-github-original"></i>
+            <h5>github/git</h5>
+          </div>
+          <div class="skill-container">
+            <i class="devicon-firebase-plain"></i>
+            <h5>firebase</h5>
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <div class="wrapper">
+        <h3>projects</h3>
+        <div class="project-container">
+          <div class="img-container">
+          <img src="./assets/mm-light.png" alt="The Movie Matchmaker website displayed on a MacBook and iPhone">
+          </div>
+          <div class="text-container">
+            <h4>movie matchmaker</h4>
+            <h5>html, css, sass, javascript</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quae commodi. Obcaecati, aliquam. Enim, veritatis.</p>
+            <button><a href="https://moviematchmaker.netlify.app/">view live</a></button>
+            <button><a href="https://github.com/haleytibbitts/movie-matchmaker">view code</a></button>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="img-container">
+          <img src="./assets/captured-light.png" alt="The Captured website displayed on a MacBook and iPhone">
+          </div>
+          <div class="text-container">
+            <h4>captured</h4>
+            <h5>html, css, sass, javascript</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quae commodi. Obcaecati, aliquam. Enim, veritatis.</p>
+            <button><a href="https://capturedbyhaley.netlify.app/">view live</a></button>
+            <button><a href="https://github.com/haleytibbitts/haley-tibbitts-project-one">view code</a></button>
+          </div>
+        </div>
+        <div class="project-container">
+          <div class="img-container">
+          <img src="./assets/ar-light.png" alt="The Animal Refuge website displayed on a MacBook and iPhone">
+          </div>
+          <div class="text-container">
+            <h4>animal refuge</h4>
+            <h5>html, css, sass</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam, quae commodi. Obcaecati, aliquam. Enim, veritatis.</p>
+            <button><a href="https://haleytibbitts.github.io/animal-refuge/">view live</a></button>
+            <button><a href="https://github.com/haleytibbitts/animal-refuge">view code</a></button>
+          </div>
+        </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="wrapper">
+        <div class="text-container">
+        <h3>get in touch</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis mollitia culpa ipsum beatae nostrum ipsa.</p>
+        <nav>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/haleytibbitts/"><i class="fa-brands fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/haleytibbitts"><i class="fa-brands fa-github"></i></a></li>
+            <li><a href="https://medium.com/@haleytibbitts"><i class="fa-brands fa-medium"></i></a></li>
+            <li><a href="https://calendly.com/haleytibbitts"><i class="fa-solid fa-calendar-days"></i></a></li>
+          </ul>
+        </nav>
+        <form name='contact' method='POST' data-netlify="true">
+          <label for="name">name</label>
+          <input type="text" id="name" placeholder="Tyler Durden">
+          <label for="email">email address</label>
+          <input type="email" name="email" id="email" placeholder="tyler@paperstreetsoap.com">
+          <label for="message">message</label>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="need website 4 super secret club. no questions payment up front."></textarea>
+          <button type="submit">submit</button>
+        </form>
+        </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <p>Built in 2023 by Haley Tibbitts</p>
+    </footer>
   </body>
   <script src="./script.js"></script>
 </html>
