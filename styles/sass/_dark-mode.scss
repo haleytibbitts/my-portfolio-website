@@ -1,0 +1,222 @@
+@use "./variables" as *;
+
+.dark-mode {
+  .border {
+    border-top: 1px solid $primaryDark;
+    border-bottom: 1px solid $primaryDark;
+  }
+
+  a {
+    color: $tertiaryDark;
+
+    &:visited {
+      color: $tertiaryDark;
+    }
+  }
+
+  button,
+  .contact-button {
+    color: $tertiaryDark;
+    border: 1px solid $tertiaryDark;
+
+    &:hover,
+    &:focus {
+      background-color: $quinaryDark;
+      box-shadow: $primaryDark 0px 0px 5px, $primaryDark 0px 0px 10px,
+        $primaryDark 0px 0px 15px, $tertiaryDark 0px 0px 20px;
+    }
+  }
+
+  footer {
+    color: $tertiaryDark;
+    background: linear-gradient(5deg, $quaternaryDark 0%, $quinaryDark 100%);
+  }
+
+  header {
+    background: linear-gradient(144deg, $quaternaryDark 0%, $quinaryDark 100%);
+    color: $tertiaryDark;
+
+    li {
+      &:hover,
+      &:focus {
+        text-shadow: $primaryDark 0px 0px 5px, $primaryDark 0px 0px 10px,
+          $primaryDark 0px 0px 15px, $tertiaryDark 0px 0px 20px;
+        box-shadow: $primaryDark 0px 0px 5px, $primaryDark 0px 0px 10px,
+          $primaryDark 0px 0px 15px, $tertiaryDark 0px 0px 20px;
+      }
+    }
+
+    .img-container {
+      border: 2px solid $primaryDark;
+      background-image: url(../../assets/night-sky.jpg);
+      text-shadow: $quaternaryDark 0px 0px 5px, $quaternaryDark 0px 0px 10px,
+        $quaternaryDark 0px 0px 15px, $quaternaryDark 0px 0px 20px;
+
+      &::before {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+    }
+
+    .text-container {
+      &::before {
+        border: 3px solid $primaryDark;
+      }
+    }
+
+    .toggle {
+      &:hover,
+      &:focus {
+        box-shadow: $primaryDark 0px 0px 5px, $primaryDark 0px 0px 10px,
+          $primaryDark 0px 0px 15px, $tertiaryDark 0px 0px 20px;
+      }
+
+      ul {
+        border: 2px solid $tertiaryDark;
+      }
+
+      .ball {
+        background-color: $tertiaryDark;
+      }
+    }
+  }
+
+  .about {
+    background: linear-gradient(38deg, $primaryDark 0%, $secondaryDark 100%);
+    color: $tertiaryDark;
+
+    .img-container {
+      img {
+        border: 2px solid $primaryDark;
+      }
+
+      &::before {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+    }
+
+    h3::before {
+      border: 3px solid $primaryDark;
+    }
+  }
+
+  .skills {
+    color: $primaryDark;
+    background: linear-gradient(144deg, $quaternaryDark 0%, $quinaryDark 100%);
+  }
+
+  .projects {
+    background: linear-gradient(114deg, $primaryDark 0%, $secondaryDark 100%);
+    color: $tertiaryDark;
+
+    .wrapper {
+      &::before {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+    }
+
+    a {
+      color: $tertiaryDark;
+
+      &:hover,
+      &:focus {
+        text-shadow: $primaryDark 0px 0px 5px, $primaryDark 0px 0px 10px,
+          $primaryDark 0px 0px 15px, $primaryDark 0px 0px 20px;
+      }
+    }
+  }
+
+  .contact {
+    color: $tertiaryDark;
+    background: linear-gradient(144deg, $quaternaryDark 0%, $quinaryDark 100%);
+
+    .text-container {
+      border: 2px solid $primaryDark;
+      background-image: url(../../assets/night-sky.jpg);
+      background-position: center;
+      background-size: cover;
+      text-shadow: $quaternaryDark 0px 0px 5px, $quaternaryDark 0px 0px 10px,
+        $quaternaryDark 0px 0px 15px, $quaternaryDark 0px 0px 20px;
+
+      &::before {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-dark.png");
+        background-size: contain;
+      }
+    }
+
+    h3 {
+      &::before {
+        border: 3px solid $primaryDark;
+      }
+    }
+
+    ul {
+      li {
+        &:hover,
+        &:focus {
+          text-shadow: $primaryDark 0px 0px 5px, $primaryDark 0px 0px 10px,
+            $primaryDark 0px 0px 15px, $quaternaryDark 0px 0px 20px;
+          color: $quaternaryDark;
+        }
+      }
+    }
+
+    form {
+      label,
+      input,
+      textarea {
+        color: $tertiaryDark;
+      }
+
+      input,
+      textarea {
+        border: 2px solid $quinaryDark;
+        background-color: $quinaryDark;
+      }
+    }
+  }
+
+  @media (max-width: 812px) {
+    header {
+      nav {
+        ul {
+          li,
+          .contact-button {
+            background-color: $quaternaryDark;
+            border: 1px solid $tertiaryDark;
+          }
+        }
+      }
+    }
+
+    .about {
+      h3 {
+        &::before {
+          border: 3px solid $primaryDark;
+        }
+      }
+    }
+  }
+}

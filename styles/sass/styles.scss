@@ -1,4 +1,12 @@
 @use "./setup";
 @use "./variables";
-@use "./base-styles";
-@use "./wip";
+@use "./main-styles";
+@use "./header";
+@use "./about";
+@use "./skills";
+@use "./projects";
+@use "./contact";
+@use "./mq-tablet";
+@use "./mq-mobile";
+@use "./light-mode";
+@use "./dark-mode";

@@ -1,29 +1,43 @@
-// grab body and store in variable
-// Add event listener on toggle to change class name on body variable
-//grab sky image
-// change sky image when event listener activated
+// App Object
+const myPortfolio = {};
 
-// Namespace object for WIP landing page
-const comingSoon = {};
+// Hamburger Menu Functionality
+const hamburger = document.querySelector(".hamburger");
+const navMenu = document.querySelector("#nav-menu");
 
-comingSoon.body = document.getElementById("theme");
-
-comingSoon.sky = document.getElementById("sky");
-
-comingSoon.toggle = document.getElementById("chk");
-
-comingSoon.isDark = false;
-
-comingSoon.toggle.addEventListener("change", () => {
-  comingSoon.body.classList.toggle("dark-mode");
-  comingSoon.chgImg();
-  comingSoon.isDark = !comingSoon.isDark;
+hamburger.addEventListener("click", () => {
+  if (navMenu.classList.value === "active") {
+    navMenu.classList.replace("active", "inactive");
+  } else if (navMenu.classList.value === "inactive") {
+    navMenu.classList.replace("inactive", "active");
+  } else {
+    navMenu.classList.add("active");
+  }
 });
 
-comingSoon.chgImg = () => {
-  if (comingSoon.isDark === false) {
-    comingSoon.sky.src = "./assets/night-sky.jpg";
+// Day & Night Mode Functionality
+myPortfolio.isDay = true;
+
+const modeInput = document.querySelector("#mode-toggle");
+const ball = document.querySelector(".ball");
+const theme = document.querySelector("#theme");
+
+console.log(ball);
+
+modeInput.addEventListener("change", () => {
+  if (myPortfolio.isDay === true) {
+    myPortfolio.isDay = false;
+    theme.classList.replace("light-mode", "dark-mode");
+    theme.classList.remove("fade-in-fast");
+    void theme.offsetWidth;
+    theme.classList.add("fade-in-fast");
+    ball.style.transform = "translateX(0px)";
   } else {
-    comingSoon.sky.src = "./assets/day-sky.jpg";
+    myPortfolio.isDay = true;
+    theme.classList.replace("dark-mode", "light-mode");
+    theme.classList.remove("fade-in-fast");
+    void theme.offsetWidth;
+    theme.classList.add("fade-in-fast");
+    ball.style.transform = "translateX(32px)";
   }
-};
+});
