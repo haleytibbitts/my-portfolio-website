@@ -1,0 +1,66 @@
+@use "./variables" as *;
+
+.projects {
+  padding: 20px 0;
+
+  .wrapper {
+    margin-bottom: 75px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      bottom: 0px;
+      left: -100px;
+      animation-name: twinkleOne;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 3s;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      top: 95px;
+      right: 0;
+      animation-name: twinkleTwo;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+      animation-duration: 3s;
+    }
+  }
+
+  h3 {
+    margin: 75px 0;
+    text-align: center;
+  }
+
+  h4 {
+    text-transform: capitalize;
+  }
+
+  a {
+    transition: all 0.2s ease-in;
+  }
+
+  .project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+
+    .img-container {
+      flex-basis: 48%;
+    }
+
+    .text-container {
+      flex-basis: 48%;
+    }
+  }
+}

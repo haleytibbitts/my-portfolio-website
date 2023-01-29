@@ -1,0 +1,231 @@
+@use "./variables" as *;
+
+.light-mode {
+  .border {
+    border-top: 1px solid $primaryLight;
+    border-bottom: 1px solid $primaryLight;
+  }
+
+  a {
+    color: $tertiaryLight;
+
+    &:visited {
+      color: $tertiaryLight;
+    }
+  }
+
+  button,
+  .contact-button {
+    color: $tertiaryLight;
+    border: 1px solid $tertiaryLight;
+  }
+
+  button,
+  .contact-button {
+    &:hover,
+    &:focus {
+      background-color: $quaternaryLight;
+      box-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
+        $primaryLight 0px 0px 15px, $tertiaryLight 0px 0px 20px;
+    }
+  }
+
+  footer {
+    color: $tertiaryLight;
+    background: linear-gradient(5deg, $quaternaryLight 0%, $quinaryLight 100%);
+  }
+
+  header {
+    background: linear-gradient(
+      144deg,
+      $quaternaryLight 0%,
+      $quinaryLight 100%
+    );
+    color: $tertiaryLight;
+
+    li {
+      &:hover,
+      &:focus {
+        text-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
+          $primaryLight 0px 0px 15px, $tertiaryLight 0px 0px 20px;
+        box-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
+          $primaryLight 0px 0px 15px, $tertiaryLight 0px 0px 20px;
+      }
+    }
+
+    .img-container {
+      border: 2px solid $primaryLight;
+      background-image: url(../../assets/day-sky.jpg);
+
+      &::before {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+    }
+
+    .text-container {
+      &::before {
+        border: 3px solid $primaryLight;
+      }
+    }
+
+    .toggle {
+      &:hover,
+      &:focus {
+        box-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
+          $primaryLight 0px 0px 15px, $tertiaryLight 0px 0px 20px;
+      }
+      ul {
+        border: 2px solid $tertiaryLight;
+      }
+
+      .ball {
+        background-color: $tertiaryLight;
+      }
+    }
+  }
+
+  .about {
+    background: linear-gradient(38deg, $primaryLight 0%, $secondaryLight 100%);
+    color: $tertiaryLight;
+
+    .img-container {
+      img {
+        border: 2px solid $primaryLight;
+      }
+
+      &::before {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+    }
+
+    h3::before {
+      border: 3px solid $primaryLight;
+    }
+  }
+
+  .skills {
+    color: $primaryLight;
+    background: linear-gradient(
+      144deg,
+      $quaternaryLight 0%,
+      $quinaryLight 100%
+    );
+  }
+
+  .projects {
+    background: linear-gradient(114deg, $primaryLight 0%, $secondaryLight 100%);
+    color: $tertiaryLight;
+
+    .wrapper {
+      &::before {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+    }
+
+    a {
+      color: $tertiaryLight;
+
+      &:hover,
+      &:focus {
+        text-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
+          $primaryLight 0px 0px 15px, $primaryLight 0px 0px 20px;
+      }
+    }
+  }
+
+  .contact {
+    color: $tertiaryLight;
+    background: linear-gradient(
+      144deg,
+      $quaternaryLight 0%,
+      $quinaryLight 100%
+    );
+
+    .text-container {
+      border: 2px solid $primaryLight;
+      background-image: url(../../assets/day-sky.jpg);
+      background-position: 65% top;
+
+      &::before {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+
+      &::after {
+        background: url("../../assets/sparkle-light.png");
+        background-size: contain;
+      }
+    }
+
+    h3 {
+      &::before {
+        border: 3px solid $primaryLight;
+      }
+    }
+
+    ul {
+      li {
+        &:hover,
+        &:focus {
+          text-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
+            $primaryLight 0px 0px 15px, $quaternaryLight 0px 0px 20px;
+          color: $quaternaryLight;
+        }
+      }
+    }
+
+    form {
+      label,
+      input,
+      textarea {
+        color: $tertiaryLight;
+      }
+
+      input,
+      textarea {
+        border: 2px solid $primaryLight;
+        background-color: $primaryLight;
+      }
+    }
+  }
+
+  @media (max-width: 812px) {
+    header {
+      nav {
+        ul {
+          li,
+          .contact-button {
+            background-color: $quaternaryLight;
+            border: 1px solid $tertiaryLight;
+          }
+        }
+      }
+    }
+
+    .about {
+      h3 {
+        &::before {
+          border: 3px solid $primaryLight;
+        }
+      }
+    }
+  }
+}
