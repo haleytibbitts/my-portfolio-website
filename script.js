@@ -83,13 +83,13 @@ contactForm.addEventListener("submit", handleSubmit);
 contactForm.addEventListener("change", () => {
   const inputValidation = [];
 
-  for (let i = 1; i <= 3; i++) {
+  for (let i = 2; i <= 4; i++) {
     if (contactForm[i].value && contactForm[i].value !== " ") {
-      inputValidation[i - 1] = true;
-      console.log(`${[i]} looks good!`);
+      inputValidation[i - 2] = true;
+      console.log(`${[i].id} looks good!`);
     } else {
-      inputValidation[i - 1] = false;
-      console.log(`${[i]} looks BAD!`);
+      inputValidation[i - 2] = false;
+      console.log(`${[i].id} looks BAD!`);
     }
   }
 
