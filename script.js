@@ -86,10 +86,8 @@ contactForm.addEventListener("change", () => {
   for (let i = 2; i <= 4; i++) {
     if (contactForm[i].value && contactForm[i].value !== " ") {
       inputValidation[i - 2] = true;
-      console.log(`${[i].id} looks good!`);
     } else {
       inputValidation[i - 2] = false;
-      console.log(`${[i].id} looks BAD!`);
     }
   }
 
@@ -98,6 +96,4 @@ contactForm.addEventListener("change", () => {
   } else {
     formIsValid = true;
   }
-
-  console.log(formIsValid);
 });
