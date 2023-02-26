@@ -22,8 +22,6 @@ const modeInput = document.querySelector("#mode-toggle");
 const ball = document.querySelector(".ball");
 const theme = document.querySelector("#theme");
 
-console.log(ball);
-
 modeInput.addEventListener("change", () => {
   if (myPortfolio.isDay === true) {
     myPortfolio.isDay = false;
@@ -39,5 +37,16 @@ modeInput.addEventListener("change", () => {
     void theme.offsetWidth;
     theme.classList.add("fade-in-fast");
     ball.style.transform = "translateX(32px)";
+  }
+});
+
+// Scroll to Top visibility
+const toTopButton = document.querySelector(".to-top");
+
+window.addEventListener("scroll", () => {
+  if (document.documentElement.scrollTop >= 75) {
+    toTopButton.style.display = "block";
+  } else {
+    toTopButton.style.display = "none";
   }
 });

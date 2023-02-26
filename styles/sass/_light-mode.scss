@@ -15,13 +15,11 @@
   }
 
   button,
-  .contact-button {
+  .contact-button,
+  .to-top {
     color: $tertiaryLight;
     border: 1px solid $tertiaryLight;
-  }
 
-  button,
-  .contact-button {
     &:hover,
     &:focus {
       background-color: $quaternaryLight;
@@ -138,6 +136,14 @@
       &::after {
         background: url("../../assets/sparkle-light.png");
         background-size: contain;
+      }
+    }
+
+    .project-container {
+      border: 2px solid rgba($color: $tertiaryLight, $alpha: 0.3);
+
+      &:hover {
+        border: 2px solid rgba($color: $tertiaryLight, $alpha: 1);
       }
     }
 

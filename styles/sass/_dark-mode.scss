@@ -15,7 +15,8 @@
   }
 
   button,
-  .contact-button {
+  .contact-button,
+  .to-top {
     color: $tertiaryDark;
     border: 1px solid $tertiaryDark;
 
@@ -129,6 +130,14 @@
       &::after {
         background: url("../../assets/sparkle-dark.png");
         background-size: contain;
+      }
+    }
+
+    .project-container {
+      border: 2px solid rgba($color: $tertiaryDark, $alpha: 0.3);
+
+      &:hover {
+        border: 2px solid rgba($color: $tertiaryDark, $alpha: 1);
       }
     }
 
