@@ -132,6 +132,10 @@ footer p {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .fade-in {
   opacity: 1;
   animation-name: fadeInOpacity;

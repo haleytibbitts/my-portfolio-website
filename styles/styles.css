@@ -395,6 +395,10 @@ footer p {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .fade-in {
   opacity: 1;
   -webkit-animation-name: fadeInOpacity;

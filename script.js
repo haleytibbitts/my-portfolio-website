@@ -50,3 +50,50 @@ window.addEventListener("scroll", () => {
     toTopButton.style.display = "none";
   }
 });
+
+// Form Submit
+const contactForm = document.querySelector("form");
+const successMsg = document.querySelector("#success");
+const failMsg = document.querySelector("#fail");
+let formIsValid = false;
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const myForm = e.target;
+  const formData = new FormData(myForm);
+
+  failMsg.style.display = "none";
+  successMsg.style.display = "none";
+
+  if (formIsValid) {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => (successMsg.style.display = "block"))
+      .catch((error) => alert(error));
+  } else {
+    failMsg.style.display = "block";
+  }
+};
+
+contactForm.addEventListener("submit", handleSubmit);
+contactForm.addEventListener("change", () => {
+  const inputValidation = [];
+
+  for (let i = 1; i <= 3; i++) {
+    if (contactForm[i].value && contactForm[i].value !== " ") {
+      inputValidation[i - 1] = true;
+    } else {
+      inputValidation[i - 1] = false;
+    }
+  }
+
+  if (inputValidation.includes(false)) {
+    formIsValid = false;
+  } else {
+    formIsValid = true;
+  }
+});
