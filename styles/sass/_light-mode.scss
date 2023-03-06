@@ -74,7 +74,8 @@
 
     .toggle {
       &:hover,
-      &:focus {
+      &:focus,
+      &:focus-within {
         box-shadow: $primaryLight 0px 0px 5px, $primaryLight 0px 0px 10px,
           $primaryLight 0px 0px 15px, $tertiaryLight 0px 0px 20px;
       }
@@ -115,7 +116,7 @@
   }
 
   .skills {
-    color: $primaryLight;
+    color: $tertiaryLight;
     background: linear-gradient(
       144deg,
       $quaternaryLight 0%,
