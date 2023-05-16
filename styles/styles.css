@@ -291,6 +291,7 @@ h2,
 h3,
 h4,
 li,
+label,
 .logo {
   font-family: "Playfair Display", serif;
 }
@@ -315,9 +316,27 @@ h5 {
   text-transform: uppercase;
 }
 
+input::-webkit-input-placeholder {
+  font-family: "Lato", sans-serif;
+}
+
+input::-moz-placeholder {
+  font-family: "Lato", sans-serif;
+}
+
+input:-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+}
+
+input::-ms-input-placeholder {
+  font-family: "Lato", sans-serif;
+}
+
 h5,
 p,
-input {
+input,
+input::placeholder,
+form button {
   font-family: "Lato", sans-serif;
 }
 
@@ -376,6 +395,7 @@ button,
   padding: 10px 20px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+  cursor: pointer;
 }
 
 nav li {
